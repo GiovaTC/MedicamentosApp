@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Farmacia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Gestión de Medicamentos</h2>
+        <form id="medicamentoForm">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="text" id="tipo" placeholder="Tipo" required>
+            <input type="date" id="fechaFabricacion" required>
+            <input type="date" id="fechaVencimiento" required>
+            <input type="text" id="imagen" placeholder="URL de la imagen">
+            <button type="submit">Agregar</button>
+        </form>
+        <ul id="medicamentosList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
