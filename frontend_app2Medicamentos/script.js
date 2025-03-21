@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
             fechaVencimiento: document.getElementById("fechaVencimiento").value,
             imagen: document.getElementById("imagen").value
         };
-        await fetch("http://localhost:5000/api/medicamentos", {
+        await fetch("https://localhost:7066/api/medicamentos", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(medicamento)
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     async function cargarMedicamentos() {
-        const response = await fetch("http://localhost:5000/api/medicamentos");
+        const response = await fetch("https://localhost:7066/api/medicamentos");
         const medicamentos = await response.json();
         lista.innerHTML = "";
         medicamentos.forEach(m => {
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     window.eliminarMedicamento = async (id) => {
-        await fetch(`http://localhost:5000/api/medicamentos/${id}`, { method: "DELETE" });
+        await fetch(`https://localhost:7066/api/medicamentos/${id}`, { method: "DELETE" });
         cargarMedicamentos();
     };
 
